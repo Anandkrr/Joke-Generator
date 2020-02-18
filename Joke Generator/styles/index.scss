@@ -30,7 +30,7 @@ body {
 }
 
 .content {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 #description{
@@ -38,14 +38,18 @@ body {
   font-family: Verdana;
 }
 
-#joke_button1, #joke_button2, #joke_button3, #joke_button4 {
+#joke_button5 {
+  margin-top: 2px;
+}
+
+#joke_button1, #joke_button2, #joke_button3, #joke_button4, #joke_button5 {
   margin-top: 40px;
   color: white;
   background-color: orange;
   border-radius: 10px; 
   font-size: 15px;
   padding: 15px 32px;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   font-family: Verdana;
   transition: 0.3s;
   opacity: 0.6;
@@ -53,18 +57,23 @@ body {
 
 }
 
-#joke_button1:hover, #joke_button2:hover, #joke_button3:hover, #joke_button4:hover {
+#joke_button1:hover, #joke_button2:hover, #joke_button3:hover, #joke_button4:hover, #joke_button5:hover {
   opacity: 1
 }
 
-#joke_button1:active, #joke_button2:active, #joke_button3:active, #joke_button4:active {
+#joke_button1:active, #joke_button2:active, #joke_button3:active, #joke_button4:active, #joke_button5:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 #joke {
   color: white;
-  font-family: Verdana
+  font-family: Verdana;
+  align-items: center;
+  vertical-align: middle;
+  display: block;
+  margin-left: 200px;
+  margin-bottom: 50px;
 }
 
 #image {
@@ -78,8 +87,14 @@ body {
 #otherJoke {
   vertical-align: middle;
   align-items: center;
+  display:inline-block;
+  margin: 20px;
 }
 
-#new {
+#name {
+  margin-bottom: 50px;
+}
+
+#joke_button4 {
 }
 

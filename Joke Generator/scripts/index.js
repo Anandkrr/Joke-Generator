@@ -21,6 +21,10 @@ document.getElementById("joke_button4").addEventListener('click', event => {
   getJoke(document.getElementById("newJoke").value);
 })
 
+document.getElementById("joke_button5").addEventListener('click', event => {
+  getRandomJoke();
+})
+
 function getJoke(searchParam) {
         console.log("https://icanhazdadjoke.com/search?term=" + searchParam);
         fetch("https://icanhazdadjoke.com/search?term=" + searchParam, options)
@@ -32,6 +36,18 @@ function getJoke(searchParam) {
           .catch(err => {
             console.log("There is some error that needs to be dealt with.")
             document.getElementById("joke").innerHTML = "There are no jokes with given keyword. Try again";
+          })
+}
+
+function getRandomJoke() {
+        fetch("https://icanhazdadjoke.com/", options)
+          .then((resp) => resp.json())
+          .then(function(data) {
+            const jokes = data.total_jokes;
+            document.getElementById("joke").innerHTML = data.joke;
+          })
+          .catch(err => {
+            console.log("There is some error that needs to be dealt with.")
           })
 }
 
